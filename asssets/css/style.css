@@ -87,7 +87,6 @@ main{
 }
 /* main content */
 main .content{
-    text-align: justify;
     flex-basis: 70%;
     padding: 20px;
     border-radius: 10px;
