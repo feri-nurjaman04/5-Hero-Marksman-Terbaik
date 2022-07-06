@@ -1,0 +1,227 @@
+/* Rules global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    overflow-x: hidden;
+}
+/* header section */
+header{
+    display: inline;
+}
+header .hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+header .hero .bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    position:absolute;
+}
+header .hero h1{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    color: #fff;
+    filter: brightness(100%);
+}
+header section{
+    position: sticky;
+    top: -1px;
+    z-index: 9;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0px 5px 10px rgb(173,173,173);
+}
+header section .logo h2 a{
+    color: #000;
+}
+header section .logo, .burger, nav{
+    padding: 0 20px;
+}
+header section .burger{
+    display: none;
+}
+header section .burger span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.5s;
+}
+header section  nav ul{
+    display: flex;
+}
+header section nav ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
+header  section nav ul li a{
+    color: #000;
+    text-decoration: none;
+}
+header section nav ul li a:hover{
+    border-bottom: solid 2px rgb(59, 39, 173);
+}
+
+/* main section */
+main{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    padding: 20px 50px;
+    color: #000;
+}
+/* main content */
+main .content{
+    text-align: justify;
+    flex-basis: 70%;
+    padding: 20px;
+    border-radius: 10px;
+}
+main .content article{
+    margin-bottom: 20px;
+}
+main .content article p a{
+    color: rgb(59, 39, 173);
+    text-decoration: none;
+    font-weight: bold;
+}
+main .content article .wrapper{
+    max-width: 100%;
+    max-height: 300px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+main .content article .wrapper img{
+    width: 100%;
+    filter: brightness(60%);
+}
+/* sidebar */
+main aside{
+    flex-basis: 30%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(173,173,173);
+}
+main aside .profil{
+    color: #fff;
+    background-color: rgb(59, 39, 173);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 70px;
+    text-align: center;
+}
+main aside .profil .container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+main aside .profil .container .wrapper{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+main aside .profil .container .wrapper img{
+    margin: 0 auto;
+}
+main aside .profil .container .wrapper:hover{
+    border-bottom: 5px solid rgb(59, 39, 173);
+}
+main aside .profil .border{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(48, 46, 46);
+    overflow: hidden;
+}
+main aside .profil .border img{
+    width: 100%;
+}
+main aside .profil article{
+    width: 250px;
+    margin: 15px auto;
+    border-bottom: solid 2px rgb(59, 39, 173);
+}
+main aside .profil a button {
+    border: none;
+    color: #000;
+    background-color: rgb(59, 39, 173);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+main aside .profil a button:hover {
+    transform: scale(95%);
+}
+/* footer section */
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+}
+footer .credit{
+    text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width:1000px) {
+    header section .burger{
+        display: flex;
+        height: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header section .burger.active span:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    header section .burger.active span:nth-child(2){
+        opacity: 0;
+    }
+    header section .burger.active span:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header section nav{
+        position: absolute;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        width: 100%;
+        transition: 0.5s;
+        padding: 10px;
+        background-color: rgb(39, 39, 39);
+    }
+    header section nav ul li a{
+        margin: 16px 0;
+        color: #fff;
+    }
+    header section nav.active{
+        left: 0;
+    }
+
+    main{
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
+}
